@@ -2,5 +2,6 @@
     background: linear-gradient(to bottom, #e4fbff 100%, #f2fdfe 50%);
     width: 100%;
     height: 100vh;
+    overflow-y: scroll;
     padding: 70px  60px;
 }
