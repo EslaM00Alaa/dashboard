@@ -1,12 +1,6 @@
-import axios from "axios";
+import sata from "./baseUrl";
 
-const sata = axios.create({
-  baseURL: "https://readx.up.railway.app",
-  withCredentials: true, // Ensure credentials are included in requests
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
+
 
 const loginApi = async (username, password) => {
   try {
