@@ -6,6 +6,7 @@ import SideBar from "./components/sidbar/sidbar";
 import New from "./pages/new/new";
 import Prev from "./pages/prev/prev";
 import Upload from "./pages/upload/upload";
+import NewProject from "./components/newproject/newproject";
 
 function App() {
   return (

@@ -45,6 +45,7 @@
     background-color: white;
     margin-bottom: 30px;
     border-radius: 12px;
+    cursor: pointer;
 }
 
 .activeproject {
