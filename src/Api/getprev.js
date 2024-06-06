@@ -7,7 +7,7 @@ const getAcceptProjects = async () => {
 
     // Make the GET request to the API endpoint
     console.log(token);
-    const response = await sata.get('/api/admin/get_accepted_projects', {
+    const response = await sata.get('/api/admin/get_previous_projects', {
       headers: {
         Authorization: `Bearer ${token}`
       }

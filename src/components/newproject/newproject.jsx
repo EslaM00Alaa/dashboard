@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { X } from 'react-bootstrap-icons';
 import './newproject.css';
+import { updateProject } from '../../Api/updateProject';
 
-const NewProject = ({ p, setShow }) => {
+const NewProject = ({ p, setShow ,setEdited,Edited}) => {
     const [Edit, setEdit] = useState(false);
     const [details, setDetails] = useState(p.description)
     return (
@@ -37,7 +38,7 @@ const NewProject = ({ p, setShow }) => {
                     <h3>Project Details</h3>
                     <div className="btns">
                         <button onClick={() => setEdit(true)}>Edit</button>
-                        <button onClick={() => setEdit(false)}>Save</button>
+                        <button onClick={ async() => {setEdit(false);await updateProject(p.id,details) ; setEdited(!Edited)}}>Save</button>
                     </div>
                 </div>
                 <div className="inputDetails">
