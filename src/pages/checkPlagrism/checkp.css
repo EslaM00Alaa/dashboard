@@ -1,0 +1,27 @@
+.cRed {
+    color: #FF5253;
+}
+
+.btnsMange {
+    width: 230px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.btnsMange .accept {
+    border: none;
+    padding:7px 30px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 6px;
+    font-size: 22px;
+}
+
+.btnsMange .reject {
+    color: #FF5253;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+}

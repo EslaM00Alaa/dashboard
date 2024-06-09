@@ -6,6 +6,7 @@ import SideBar from "./components/sidbar/sidbar";
 import New from "./pages/new/new";
 import Prev from "./pages/prev/prev";
 import Upload from "./pages/upload/upload";
+import Checkplagiarism from "./pages/checkPlagrism/checkP";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/newprojects" element={ <> <SideBar/> <New /> </> } />
         <Route path="/previousprojects" element={ <> <SideBar/> <Prev /> </> } />
         <Route path="/uploadfiles" element={ <> <SideBar/> <Upload /> </> } />
+        <Route path="/checkplagiarism/:id" element={ <> <SideBar/> <Checkplagiarism /> </> } />
         <Route path="/login" element={<Login />} />
       </Routes>
 

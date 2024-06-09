@@ -21,6 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--second-color);
 }
 
 .imagee img {

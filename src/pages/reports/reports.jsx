@@ -41,6 +41,16 @@ const Reports = () => {
         </div>
       </div>
 
+      
+
+      <div className="line mb20 bgwhite ">
+          <h3>Submitted Students</h3>
+          <div className="prograssParContainer">
+            <div style={{ width: `${submittedStudentsPercentage}%` }} className="prograssPar"></div>
+          </div>
+        </div>
+      
+
       <div className="bgwhite">
         <div className="box-color">
           <div className="box">
@@ -55,12 +65,7 @@ const Reports = () => {
           </div>
         </div>
 
-        <div className="line mb20 bggray">
-          <h3>Submitted Students</h3>
-          <div className="prograssParContainer">
-            <div style={{ width: `${submittedStudentsPercentage}%` }} className="prograssPar"></div>
-          </div>
-        </div>
+        
 
         <div className="line mb20 bggray">
           <h3>All Projects</h3>

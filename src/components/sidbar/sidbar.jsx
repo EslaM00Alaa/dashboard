@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './sidbar.css'
-import vector from '../../image/vector.png'
+import vector from './logo.png'
 import { ClipboardDataFill} from "react-bootstrap-icons"
 import {FileTextFill} from "react-bootstrap-icons"
 import {FilterSquareFill} from "react-bootstrap-icons"
@@ -58,7 +58,7 @@ const SideBar = () => {
             Setting  
             </span>
         </div>
-    <div className='link' onClick={()=>{localStorage.removeItem('userToken');navigate('/login');logout()}}>
+    <div className='link' onClick={ async()=>{ await logout();localStorage.removeItem('userToken');navigate('/login');}}>
             <ArrowRightSquareFill/>
             <span>
             log out  

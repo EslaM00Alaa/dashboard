@@ -50,7 +50,7 @@ const Prev = () => {
 
   return (
     <div className='prev'>
-      {showPro && <NewProject p={specificProject} setShow={setShowPro} setEdited={setEdited} edited={edited} />}
+      {showPro && <NewProject p={specificProject} setShow={setShowPro} setEdited={setEdited} edited={edited} isNew={false}  />}
       <div className='line'>
       <h1>Previous Graduation Projects</h1>
         <div className="search">

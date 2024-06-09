@@ -48,11 +48,13 @@
     cursor: pointer;
 }
 
-.project h5:first-child {
+.project h5 {
     width: calc(70% / 4);
+    text-align: center;
 }
 .project h5:first-child {
     width: 30%;
+    text-align: left;
 }
 
 .activeproject {

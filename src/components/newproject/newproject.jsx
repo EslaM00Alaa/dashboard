@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { X } from 'react-bootstrap-icons';
 import './newproject.css';
 import { updateProject } from '../../Api/updateProject';
+import { Link } from 'react-router-dom';
 
-const NewProject = ({ p, setShow ,setEdited,Edited}) => {
+const NewProject = ({ p, setShow ,setEdited,Edited , isNew }) => {
     const [Edit, setEdit] = useState(false);
     const [details, setDetails] = useState(p.description)
     return (
@@ -17,6 +18,15 @@ const NewProject = ({ p, setShow ,setEdited,Edited}) => {
                     <h1>{p.name}</h1>
                 </div>
 
+                {isNew && (
+       
+          <Link to={`/checkplagiarism/${p.id}`}>
+             <div className='chckP'>
+            <h5>Check Plagiarism</h5>
+            </div>
+          </Link>
+
+      )}
                 <div className="lineinfo">
                     <h5>Submitted by</h5>
                     <h4>{p.user_name}</h4>

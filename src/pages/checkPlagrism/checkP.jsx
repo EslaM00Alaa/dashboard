@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import './new.css';
+import './checkp.css';
 import { Search } from 'react-bootstrap-icons';
 import { Link, useNavigate } from "react-router-dom";
 import getPendingProjects from '../../Api/getnew'; // Ensure you have the correct import path
 import NewProject from '../../components/newproject/newproject';
 import Pagination from '../../components/pagniation/pagniaton';
 
-const New = () => {
+const Checkplagiarism = () => {
   const [projects, setProjects] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [specificProject, setSpecificProject] = useState({});
   const [showPro, setShowPro] = useState(false);
   const [edited, setEdited] = useState(true);
   const [index, setIndex] = useState(1);
+  const [name, setName] = useState("ReadX");
   const projectsPerPage = 5;
   const userData = localStorage.getItem('userToken');
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -51,17 +53,21 @@ const New = () => {
   return (
     <div className='new'>
       {showPro && <NewProject p={specificProject} setShow={setShowPro} setEdited={setEdited} edited={edited} isNew={true} />}
+      
       <div className='line'>
-        <h1>New Graduation Projects</h1>
-        <div className="search">
-          <Search className='searchicon' />
-          <input
-            type='text'
-            placeholder='Search By Name'
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
+        <h1 className='cRed'>{name} Matching With:</h1>
+       
+       <div className='btnsMange'>
+
+        <button className='reject'>
+        Reject
+        </button>
+        <button className='accept'>
+        Accept
+        </button>
+
+       </div>
+
       </div>
       <div className='projects-list'>
         {paginatedProjects.map((p, idx) => (
@@ -83,4 +89,4 @@ const New = () => {
   );
 };
 
-export default New;
+export default Checkplagiarism;
