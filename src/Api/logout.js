@@ -1,7 +1,8 @@
 import sata from "./baseUrl";
-const token = JSON.parse(localStorage.getItem('userToken')).token;
+
 
 const logout = async () => {
+    const token = JSON.parse(localStorage.getItem('userToken')).token;
   try {
     await sata.post('/api/admin/logout', {}, {
       headers: {
