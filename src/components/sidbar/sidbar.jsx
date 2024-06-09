@@ -9,6 +9,7 @@ import {GearFill} from "react-bootstrap-icons"
 import {ArrowRightSquareFill} from "react-bootstrap-icons"
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import logout from '../../Api/logout';
 
 
 const SideBar = () => {
@@ -57,7 +58,7 @@ const SideBar = () => {
             Setting  
             </span>
         </div>
-    <div className='link' onClick={()=>{localStorage.removeItem('userToken');navigate('/login')}}>
+    <div className='link' onClick={()=>{localStorage.removeItem('userToken');navigate('/login');logout()}}>
             <ArrowRightSquareFill/>
             <span>
             log out  

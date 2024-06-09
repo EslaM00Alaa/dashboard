@@ -23,13 +23,16 @@
 }
 .x {
     position: absolute;
-    top: -60px;
+    top: -50px;
     z-index: 5;
     font-size: 38px;
     color: #e9e9e9;
     right: 10px;
     cursor: pointer;
 }
+.x:hover {
+    background-color: rgba(255, 255, 255, 0.301);
+} 
 
 .pName h1 {
     font-weight: 700;

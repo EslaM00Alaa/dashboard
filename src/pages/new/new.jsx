@@ -13,7 +13,7 @@ const New = () => {
   const [showPro, setShowPro] = useState(false);
   const [edited, setEdited] = useState(true);
   const [index, setIndex] = useState(1);
-  const projectsPerPage = 2;
+  const projectsPerPage = 5;
   const userData = localStorage.getItem('userToken');
   const navigate = useNavigate();
 
