@@ -9,7 +9,7 @@ const Reports = () => {
   const [submittedStudentsPercentage, setSubmittedStudentsPercentage] = useState(0);
   const [acceptedProjectsPercentage, setAcceptedProjectsPercentage] = useState(0);
   const [projectsByField, setProjectsByField] = useState([]);
-  
+  const [maxNumber, setMaxNumber] = useState(0);
   const userData = localStorage.getItem('userToken');
   const navigate = useNavigate();
 
@@ -23,6 +23,10 @@ const Reports = () => {
         setSubmittedStudentsPercentage(submitted_students_percentage);
         setAcceptedProjectsPercentage(accepted_projects_percentage);
         setProjectsByField(projectsByField);
+
+        // Calculate maxNumber after projectsByField is updated
+        const maxNumber = Math.max(...projectsByField.map(p => p.percentage));
+        setMaxNumber(maxNumber);
       })();
     }
   }, [userData, navigate]);
@@ -73,7 +77,7 @@ const Reports = () => {
             <div key={index} className="field">
               <div className="par">
                 <span>{f.percentage}%</span>
-                <div style={{ height: `${f.percentage}%` }} className="progressparr"></div>
+                <div style={{ height: `${f.percentage / maxNumber * 100}%` }} className="progressparr"></div>
               </div>
               <h5>{f.field}</h5>
             </div>

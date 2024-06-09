@@ -48,6 +48,13 @@
     cursor: pointer;
 }
 
+.project h5:first-child {
+    width: calc(70% / 4);
+}
+.project h5:first-child {
+    width: 30%;
+}
+
 .activeproject {
     background: linear-gradient(to right, #8bd2ded2 50%, #8bd2de50,white );
   }
