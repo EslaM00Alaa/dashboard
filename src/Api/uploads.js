@@ -1,6 +1,6 @@
 import sata from "./baseUrl";
 
-const token = JSON.parse(localStorage.getItem('userToken')).token;
+const token = JSON.parse(localStorage.getItem('userToken'))?.token;
 
 class Upload {
   constructor(token) {
