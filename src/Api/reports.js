@@ -1,4 +1,4 @@
-import sata from "./baseUrl";  
+import baseURL from "./baseUrl";  
 
 const getReports = async () => {
   try {
@@ -7,7 +7,7 @@ const getReports = async () => {
 
     // Make the GET request to the API endpoint
     console.log(token);
-    const response = await sata.get('/api/admin/get_projects_report', {
+    const response = await baseURL.get('/api/admin/get_projects_report', {
       headers: {
         Authorization: `Bearer ${token}`
       }

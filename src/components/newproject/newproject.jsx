@@ -20,13 +20,12 @@ const NewProject = ({ p, setShow ,setEdited,Edited , isNew }) => {
 
                 {isNew && (
        
-          <Link to={`/checkplagiarism/${p.id}`}>
+          <Link to={`/checkplagiarism/${p.id}/${p.description}/${p.name}`}>
              <div className='chckP'>
             <h5>Check Plagiarism</h5>
             </div>
           </Link>
-
-      )}
+                )}
                 <div className="lineinfo">
                     <h5>Submitted by</h5>
                     <h4>{p.user_name}</h4>

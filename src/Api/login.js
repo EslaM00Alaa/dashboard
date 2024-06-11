@@ -1,4 +1,4 @@
-import sata from "./baseUrl";
+import baseURL from "./baseUrl";
 
 
 
@@ -8,7 +8,7 @@ const loginApi = async (username, password) => {
       .querySelector('meta[name="csrf-token"]')
       .getAttribute("content");
 
-    const response = await sata.post(
+    const response = await baseURL.post(
       "/api/admin/login",
       {
         username,
@@ -25,6 +25,7 @@ const loginApi = async (username, password) => {
     const { token } = data;
 
     localStorage.setItem("userToken", JSON.stringify({ token }));
+    localStorage.setItem("readuxname", JSON.stringify({ username }));
 
     // Return true to indicate successful login
     return true;

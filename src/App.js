@@ -18,7 +18,7 @@ function App() {
         <Route path="/newprojects" element={ <> <SideBar/> <New /> </> } />
         <Route path="/previousprojects" element={ <> <SideBar/> <Prev /> </> } />
         <Route path="/uploadfiles" element={ <> <SideBar/> <Upload /> </> } />
-        <Route path="/checkplagiarism/:id" element={ <> <SideBar/> <Checkplagiarism /> </> } />
+        <Route path="/checkplagiarism/:id/:description/:name" element={ <> <SideBar/> <Checkplagiarism /> </> } />
         <Route path="/login" element={<Login />} />
       </Routes>
 

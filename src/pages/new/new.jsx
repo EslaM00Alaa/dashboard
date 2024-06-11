@@ -65,7 +65,7 @@ const New = () => {
       </div>
       <div className='projects-list'>
         {paginatedProjects.map((p, idx) => (
-          <div onClick={() => clickOnProject(p)} key={idx} className={`project ${p.status === 'pending' ? 'activeproject' : ''}`}>
+          <div onClick={() => clickOnProject(p)} key={idx} className={`project ${p.status === 'accepted' ? 'activeproject' : ''}`}>
             <h5 className='project-name'>{p.name}</h5>
             <h5 className='project-field'>{p.field}</h5>
             <h5 className='project-date'>{p.year}</h5>

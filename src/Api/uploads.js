@@ -1,4 +1,4 @@
-import sata from "./baseUrl";
+import baseURL from "./baseUrl";
 
 const token = JSON.parse(localStorage.getItem('userToken'))?.token;
 
@@ -14,7 +14,7 @@ class Upload {
     }
 
     try {
-      const result = await sata.post(endpoint, formData, {
+      const result = await baseURL.post(endpoint, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${this.token}`

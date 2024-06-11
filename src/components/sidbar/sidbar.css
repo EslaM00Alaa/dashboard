@@ -4,13 +4,14 @@
     background: linear-gradient(to bottom, #038296 0%, #008EA4 100%);
 }
 .userinfo {
-    padding: 10px;
+    padding: 0px 15px;
     background-color: white;
     border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 60px 10px 35px;
+    
 }
 
 .imagee {
@@ -35,11 +36,11 @@
 .textinfo h3 ,
 .textinfo p
 {
-    margin-left: 5px;
-    font-size: 12px;
+    margin-left: 9px;
 }
 .textinfo h3 
 {
+    font-size: 18px;
     font-weight: bold;
 }
 

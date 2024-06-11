@@ -1,4 +1,4 @@
-import sata from "./baseUrl";
+import baseURL from "./baseUrl";
 
 
 
@@ -6,7 +6,7 @@ const updateProject = async (n, description) => {
   try {
     let token = JSON.parse(localStorage.getItem('userToken')).token;
       console.log(n,description);
-     await sata.post(
+     await baseURL.post(
       `/api/admin/update_project/${n}`,
       {
         description

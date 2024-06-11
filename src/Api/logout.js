@@ -1,10 +1,10 @@
-import sata from "./baseUrl";
+import baseURL from "./baseUrl";
 
 
 const logout = async () => {
     const token = JSON.parse(localStorage.getItem('userToken')).token;
   try {
-    await sata.post('/api/admin/logout', {}, {
+    await baseURL.post('/api/admin/logout', {}, {
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`
